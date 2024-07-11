@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    window.document.body.style.margin=0;
+    window.document.body.style.padding=0;
+
+    function getAndcreate(want,id,styles,textNode,parent,children){
+      const element = document[want](id);
+      for(let value in styles){
+        element.style[value]=styles[value]
+      }
+      element.textContent = textNode
+      return element
+    }
+    const allStyle = {
+      root : {
+        backgroundColor : "lightcoral",
+        width:"100vw",
+        height:"100vh"
+      },
+      content:{
+        display : "flex",
+        flexDirection : "column",
+        height:"100vh"
+      },
+      inContent:{
+        backgroundColor : "rgb(255,255,255,0.4)",
+        width:"50%",
+        height:"60vh",
+        marginTop:"209px",
+        marginLeft:"80px",
+      },
+      exContent:{
+        backgroundColor : "rgb(255,255,255,0.4)",
+        width:"50%",
+        height:"40vh",
+        marginTop:"159px",
+        marginLeft:"80px",
+      }
+
+    }
+    const root = getAndcreate("getElementById","root",allStyle.root);
+    const content = getAndcreate("createElement","div",allStyle.content);
+    root.appendChild(content)
+    const inContent = getAndcreate("createElement","div",allStyle.inContent,"indentation");
+    content.appendChild(inContent)
+
+    const exContent = getAndcreate("createElement","div",allStyle.exContent,"exclusive");
+    content.appendChild(exContent)
+
+  </script>
+</body>
+</html>
