@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    window.document.body.style.margin=0;
+    window.document.body.style.padding=0;
+
+    const root = document.getElementById('root');
+    root.style.backgroundColor="lightcoral"
+    root.style.width="100vw";
+    root.style.height="100vh";
+
+    const content = document.createElement("div");
+    root.appendChild(content);
+    content.style.display="flex";
+    content.style.flexDirection="column"
+    content.style.height="100vh";
+
+    const inContent = document.createElement("div");
+    content.appendChild(inContent);
+    inContent.style.backgroundColor="rgb(255,255,255,0.4)"
+    inContent.style.width="50%";
+    inContent.style.height="60vh"
+    inContent.style.marginTop="209px";
+    inContent.style.marginLeft="80px"
+    inContent.textContent="indentation";
+
+
+    const exContent = document.createElement("div");
+    content.appendChild(exContent);
+    exContent.style.backgroundColor="rgb(255,255,255,0.4)";
+    exContent.style.width="50%";
+    exContent.style.height="40vh";
+    exContent.style.marginTop="159px"
+    exContent.style.marginLeft="80px"
+    exContent.textContent="exclusive";
+
+  </script>
+</body>
+</html>
