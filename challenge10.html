@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    #root{
+      background-color: lightcoral;
+      width: 100vw;
+      height: 100vh;
+    }
+    #content{
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      justify-content: center;
+    }
+    #in-content{
+      background-color: rgb(255,255,255,0.6);
+      width: 50%;
+      height: 60vh;
+      margin-top: 209px;
+      margin-left: 80px;
+    }
+    #ex-content{
+      background-color: rgb(255,255,255,0.6);
+      width: 50%;
+      height: 40vh;
+      margin-top: 159px;
+      margin-left: 80px;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div id="content">
+      <div id="in-content">indentation</div>
+      <div id="ex-content">exclusive</div>
+    </div>
+  </div>
+</body>
+</html>
